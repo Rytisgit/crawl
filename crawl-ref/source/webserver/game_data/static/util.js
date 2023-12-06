@@ -135,9 +135,10 @@ function () {
         element.height = Math.floor(h * ratio);
         // var ctx = element.getContext('2d');
         // ctx.resetTransform();
-        ctx.scale(ratio, ratio);
         element.style.width = w + 'px';
         element.style.height = h + 'px';
+        ctx.scale(ratio, ratio);
+        
     }
 
     function make_key(x, y) {
