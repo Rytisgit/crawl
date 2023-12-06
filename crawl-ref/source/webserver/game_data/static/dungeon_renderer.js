@@ -299,8 +299,8 @@ function ($, comm, cr, map_knowledge, options, dngn, util, view_data, enums,
             else
                 this.set_cell_size(cell_size.w, cell_size.h);
 
-            var view_width = Math.floor(width / this.cell_width);
-            var view_height = Math.floor(height / this.cell_height);
+            var view_width = Math.floor(width  * window.devicePixelRatio / this.cell_width);
+            var view_height = Math.floor(height  * window.devicePixelRatio / this.cell_height);
             this.set_size(view_width, view_height);
         },
 

@@ -1188,16 +1188,16 @@ function ($, view_data, gui, main, tileinfo_player, icons, dngn, enums,
             // relative to the cell origin. Because of differences in how x/y
             // are treated above, these may look like they're doing something
             // different, but they shouldn't be.
-            const scaled_w = Math.floor((total_x_offset + w) * img_xscale * ratio)
-                                - Math.floor(total_x_offset * img_xscale * ratio);
-            const scaled_h = Math.floor(ey * img_yscale * ratio)
-                                - Math.floor(sy * img_yscale * ratio);
+            const scaled_w = Math.floor((total_x_offset + w) * img_xscale )
+                                - Math.floor(total_x_offset * img_xscale);
+            const scaled_h = Math.floor(ey * img_yscale )
+                                - Math.floor(sy * img_yscale);
 
             this.ctx.imageSmoothingEnabled = options.get("tile_filter_scaling");
             this.ctx.drawImage(img,
                            info.sx, info.sy + sy - pos_sy_adjust, w, h,
-                           x + Math.floor(total_x_offset * img_xscale * ratio),
-                           y + Math.floor(sy * img_yscale * ratio),
+                           x + Math.floor(total_x_offset * img_xscale ),
+                           y + Math.floor(sy * img_yscale ),
                            scaled_w,
                            scaled_h);
         },
