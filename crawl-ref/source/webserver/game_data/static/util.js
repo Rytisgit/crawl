@@ -130,15 +130,14 @@ function () {
         // function is used. Things might be simpler if this value consistently
         // represented just the device vs logical pixel ratio, but aside from
         // safari, it also factors in browser zoom.
-        const ratio = window.devicePixelRatio || 1;
+        const ratio = window.devicePixelRatio;
         element.width = Math.floor(w * ratio);
         element.height = Math.floor(h * ratio);
-        var ctx = element.getContext('2d');
+        // var ctx = element.getContext('2d');
         // ctx.resetTransform();
+        // ctx.scale(ratio, ratio);
         element.style.width = w + 'px';
         element.style.height = h + 'px';
-        ctx.scale(ratio, ratio);
-        
     }
 
     function make_key(x, y) {
