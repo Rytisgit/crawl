@@ -133,7 +133,7 @@ function () {
         const ratio = window.devicePixelRatio || 1;
         element.width = Math.floor(w * ratio);
         element.height = Math.floor(h * ratio);
-        // var ctx = element.getContext('2d');
+        var ctx = element.getContext('2d');
         // ctx.resetTransform();
         element.style.width = w + 'px';
         element.style.height = h + 'px';
