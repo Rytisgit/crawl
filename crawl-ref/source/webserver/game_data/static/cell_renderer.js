@@ -87,12 +87,12 @@ function ($, view_data, gui, main, tileinfo_player, icons, dngn, enums,
             this.ctx = this.element.getContext("2d");
         },
 
-        set_cell_size: function(w, h)
+        set_cell_size: function(w, h, scale)
         {
             this.cell_width = Math.floor(w);
             this.cell_height = Math.floor(h);
-            this.x_scale = this.cell_width / 32;
-            this.y_scale = this.cell_height / 32;
+            this.x_scale = scale || 1;
+            this.y_scale = scale || 1;
         },
 
         glyph_mode_font_name: function (scale, device)

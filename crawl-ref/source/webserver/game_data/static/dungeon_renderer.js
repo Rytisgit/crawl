@@ -293,7 +293,8 @@ function ($, comm, cr, map_knowledge, options, dngn, util, view_data, enums,
                 var rescale = Math.min(width / (min_diameter * cell_size.w),
                                      height / (min_diameter * cell_size.h));
                 this.set_cell_size(Math.floor(cell_size.w * rescale),
-                                   Math.floor(cell_size.h * rescale));
+                                   Math.floor(cell_size.h * rescale), 
+                                   rescale);
             }
             else
                 this.set_cell_size(cell_size.w, cell_size.h);
